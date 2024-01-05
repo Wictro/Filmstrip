@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    padding: 2rem;
+}
+
+.slider-wrapper{
+    width: min(500px, 100%);
+    position: relative;
+    height: 5px;
+    background-color: grey;
+    cursor: pointer;
+    margin-inline: auto;
+}
+
+.slider-progress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: #f00;
+}
+
+.slider-knob{
+    width: 16px;
+    height: 16px;
+    background-color: #f00;
+    border-radius: 50%;
+    position: absolute;
+    top: -6px;
+    left: -8px;
+    cursor: pointer;
+    transition: scale .2s ease;
+}
+
+.slider-knob:hover{
+    scale: 1.1;
+}
+
+.filmstrip{
+    /* maintain a 16/9 aspect ratio */
+    width: 160px;
+    /* height: 90px; */
+    aspect-ratio: 16 / 9;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background-image: url(filmstrip.jpg);
+    box-shadow: 1px 1px 1px grey;
+}
+
+.filmstrip.show{
+    visibility: visible;
+}
+
+p{
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
