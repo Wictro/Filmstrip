@@ -1,2 +1,2 @@
 # Filmstrip
-A video scrolling feature
+A video scrolling feature like Youtube. Find the code live here.
